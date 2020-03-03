@@ -43,7 +43,6 @@ class ExplorerComponent extends Component {
                 return addUserValidate(formField, input, this.props.body)
             default:
                 return;
-                
         }
     }
 
@@ -58,7 +57,7 @@ class ExplorerComponent extends Component {
     }
 
     handleSubmit() {
-        // Check form validation if POST or PUT
+        // Check form validation if POST or PUT request.
         if (this.props.method === 'POST' || this.props.method === 'PUT') {
             for (let i in this.state.errors) {
                 if (this.state.errors[i] !== '') {
@@ -67,6 +66,7 @@ class ExplorerComponent extends Component {
                 }
             }
         }
+
         let axiosConfig = {
             headers: {
                 'content-type': 'application/json',
@@ -74,6 +74,7 @@ class ExplorerComponent extends Component {
                 'cache-control': 'no-cache'
             }
         }
+        
         if (this.props.method === 'POST') {
             this.setState({loading:true});
             axios.post(this.props.url, this.state.payload, axiosConfig)
@@ -103,17 +104,18 @@ class ExplorerComponent extends Component {
                 <h3 className="headerText">{this.props.method}</h3>
                 <p>Base URL: {this.props.url}</p>
                 {this.props.method === 'POST' || this.props.method === 'PUT' ? 
-                    this.renderBody(this.props.title, this.props.body) : null
+                    this.renderBody(this.props.title, this.props.body) 
+                    : null
                 }
                 <button onClick={()=>this.handleSubmit()}>Send Request</button>
                 <p>{this.state.loading ? '...Loading response' : null}</p>
                 <p className="responseBox">
-                    {this.state.statusCode }
+                    {this.state.statusCode}
                     <br />
                     {JSON.stringify(this.state.responseData.data)}
                 </p>
             </div>
-        )
+        );
     }
 }
 
