@@ -22,7 +22,9 @@ class ExplorerComponent extends Component {
                 return obj;
             }, {});
             const errors = this.props.body.reduce((obj, item) => {
-                obj[item.name] = this.validateForm(this.props.title, '', item.name);
+                if (item['required'] && item['required'] === true) {
+                    obj[item.name] = this.validateForm(this.props.title, '', item.name);
+                } 
                 return obj;
             }, {});
             this.setState({payload, errors});
@@ -74,7 +76,7 @@ class ExplorerComponent extends Component {
                 'cache-control': 'no-cache'
             }
         }
-        
+
         if (this.props.method === 'POST') {
             this.setState({loading:true});
             axios.post(this.props.url, this.state.payload, axiosConfig)
