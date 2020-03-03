@@ -35,6 +35,6 @@ If any of the above critera does not fit, an alert will be notified to the user 
 
 2) Click on the send request button. This should return either a sucessful 201 response with a JSON in the response box, or an alert error if the request failed.
 
-![response](https://github.com/kedpak/smartcar_demo/blob/master/public/input.png)
+![response](https://github.com/kedpak/smartcar_demo/blob/master/public/response.png)
 
 
