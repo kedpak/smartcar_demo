@@ -6,8 +6,8 @@ This application is an API explorer which allows the user to interact with a giv
 
 This application was built using the following libraries/frameworks:
 
-..* React.js via create-react-app
-..* axios
+* React.js via create-react-app
+* axios
 
 ## Installation
 
@@ -31,10 +31,10 @@ npm start
 ..* phone number must be only integers and dashes in the following pattern: 000-000-0000
 If any of the above critera does not fit, an alert will be notified to the user informing them about it.
 
-[<img src="https://ibb.co/mhn305r">](https://ibb.co/mhn305r)
+![inputs](https://github.com/kedpak/smartcar_demo/blob/master/public/input.png)
 
 2) Click on the send request button. This should return either a sucessful 201 response with a JSON in the response box, or an alert error if the request failed.
 
-[<img src="https://ibb.co/P6N6wh" >](https://ibb.co/P6N6whL)
+![response](https://github.com/kedpak/smartcar_demo/blob/master/public/input.png)
 
 
