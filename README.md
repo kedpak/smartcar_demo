@@ -21,7 +21,7 @@ npm install
 ```
 npm start
 ```
-4. Naviate to localhost:3000 in browser to test application.
+4. Navigate to localhost:3000 in browser to test application.
 
 ## Instructions
 
