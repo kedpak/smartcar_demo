@@ -26,10 +26,10 @@ npm start
 ## Instructions
 
 1) User must input the request body parameters through the form inputs.
-..* email must be between 3 - 24 characters
-..* full name is a required field
-..* phone number must be only integers and dashes in the following pattern: 000-000-0000
-If any of the above critera does not fit, an alert will be notified to the user informing them about it.
+* email must be between 3 - 24 characters
+* full name is a required field
+* phone number must be only integers and dashes in the following pattern: 000-000-0000
+*If any of the above critera does not fit, an alert will be notified to the user informing them about it.
 
 ![inputs](https://github.com/kedpak/smartcar_demo/blob/master/public/input.png)
 
